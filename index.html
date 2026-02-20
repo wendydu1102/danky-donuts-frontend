@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Danky Donuts</title>
+  <meta name="description" content="Local donut shop featuring artisanal, fresh donuts every day. Order now! ">
+
+  <!-- Preconnect to fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <a href="#home">
+          <svg width="48" height="48" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="45" stroke="var(--primary)" stroke-width="8" />
+            <circle cx="50" cy="50" r="15" fill="var(--primary)" />
+          </svg>
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#menu-sampler">Menu</a></li>
+        <li><a href="#order-now" class="btn-primary" id="nav-order-btn">order now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HOME SECTION -->
+  <section id="home" class="section-home">
+    <div class="hero-container">
+      <div class="hero-bg-text" id="hero-bg-text">
+        <!-- Text pattern will go here or background styling -->
+        <h2>DANKY DONUT DANKY DONUT DANKY DONUT DANKY DONUT DANKY DONUT DANKY DONUT DANKY DONUT DANKY DONUT DANKY DONUT
+          DANKY DONUT DANKY DONUT DANKY DONUT</h2>
+      </div>
+      <div class="hero-svg-layer" id="hero-svg-layer"></div>
+    </div>
+  </section>
+
+  <!-- MENU SAMPLER (CAROUSEL) SECTION -->
+  <section id="menu-sampler" class="section-sampler">
+    <div class="carousel-container">
+      <button class="carousel-btn left-btn" id="prev-btn">&lt;</button>
+      <div class="carousel-track-container">
+        <ul class="carousel-track" id="carousel-track">
+          <!-- Populated by JS -->
+        </ul>
+      </div>
+      <button class="carousel-btn right-btn" id="next-btn">&gt;</button>
+    </div>
+    <div class="sampler-actions">
+      <a href="#order-now" class="btn-dark">menu</a>
+    </div>
+
+    <!-- OUR STORY TEASER -->
+    <div class="story-teaser-box">
+      <p class="teaser-text">
+        At Danky Donuts, we pride ourselves on our commitment to quality, creativity, and customer satisfaction, making
+        every visit a memorable one. Come and taste the difference where every bite is a little piece of heaven.
+      </p>
+      <a href="#about" class="btn-dark" id="read-story-btn">read our story</a>
+    </div>
+  </section>
+
+  <!-- ABOUT SECTION -->
+  <section id="about" class="section-about">
+    <div class="about-container">
+      <!-- Top Video Compilation -->
+      <div class="about-video-header">
+        <a href="https://www.instagram.com/dankydonuts/?hl=en" target="_blank" class="video-placeholder main-video">
+          <!-- Removed video, left blank -->
+          <div class="video-overlay">
+            <span>ABOUT</span><br><small>video compilation</small>
+          </div>
+        </a>
+      </div>
+
+      <div class="about-content-grid">
+        <div class="about-text">
+          <h3>OUR STORY</h3>
+          <p>Welcome to Danky Donuts, the premier food truck experience in San Diego, CA. where we serve up a delightful
+            array of artisanal donuts crafted with love and the finest ingredients. Our menu features an exciting
+            variety of flavors and toppings, ensuring there's a perfect treat for every palate.</p>
+        </div>
+
+        <div class="about-videos-right">
+          <a href="https://www.instagram.com/dankydonuts/?hl=en" target="_blank"
+            class="video-placeholder child-video shape-1">
+            <!-- Removed image, left blank -->
+          </a>
+        </div>
+
+        <div class="about-videos-left">
+          <a href="https://www.instagram.com/dankydonuts/?hl=en" target="_blank"
+            class="video-placeholder child-video shape-2">
+            <!-- Removed image, left blank -->
+          </a>
+        </div>
+
+        <div class="about-text-lower">
+          <h3>FRESH EVERY DAY</h3>
+          <p>At Danky Donuts, we pride ourselves on our commitment to quality, creativity, and customer satisfaction,
+            making every visit a memorable one. Whether you're a local or just passing through, our vibrant food truck
+            is a must-visit destination for donut enthusiasts of all ages. Come and taste the difference at Danky
+            Donuts.</p>
+        </div>
+      </div>
+
+      <!-- YELP REVIEWS -->
+      <div class="yelp-reviews-container">
+        <!-- We use custom stylized divs instead of literal iframe plugins for aesthetic control -->
+        <a href="https://www.yelp.com/biz/danky-donuts-san-diego-2" target="_blank" class="yelp-review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"I have had these guys donuts for years and can say hands down they are like no other."
+          </p>
+          <div class="reviewer">
+            <div class="avatar bg-gray"></div>
+            <span>West W.</span>
+          </div>
+        </a>
+        <a href="https://www.yelp.com/biz/danky-donuts-san-diego-2" target="_blank" class="yelp-review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"concept is genius and simple. Great donuts nice and fluffy tossed in a glaze of your
+            choice."</p>
+          <div class="reviewer">
+            <div class="avatar bg-gray"></div>
+            <span>Ro N.</span>
+          </div>
+        </a>
+        <a href="https://www.yelp.com/biz/danky-donuts-san-diego-2" target="_blank" class="yelp-review-card">
+          <div class="stars">★★★★★</div>
+          <p class="review-text">"Mini donuts churned right fresh from their unique donut-making apparatus!"</p>
+          <div class="reviewer">
+            <div class="avatar bg-gray"></div>
+            <span>Jessica S.</span>
+          </div>
+        </a>
+      </div>
+      <div class="yelp-btn-container">
+        <a href="https://www.yelp.com/biz/danky-donuts-san-diego-2" target="_blank" class="btn-dark">review us on
+          Yelp!</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER NOW (MENU GRID) -->
+  <section id="order-now" class="section-order">
+    <h2>ORDER NOW</h2>
+
+    <div class="menu-category">
+      <h3>FAVORITES</h3>
+      <div class="donut-grid" id="favorites-grid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <h4>CONTACT US</h4>
+    <div class="social-links">
+      <a href="#" class="social-box">IG</a>
+      <a href="#" class="social-box">FB</a>
+      <a href="#" class="social-box">X</a>
+      <a href="#" class="social-box">YT</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
