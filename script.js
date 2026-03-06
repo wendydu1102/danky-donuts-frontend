@@ -13,15 +13,15 @@ document.addEventListener("DOMContentLoaded", () => {
 const BLANK_IMG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23d4d4d4'/%3E%3C/svg%3E";
 
 const DONUTS = [
-  { id: 'd1', name: 'Classic Glazed', img: BLANK_IMG },
-  { id: 'd2', name: 'Strawberry Sprinkle', img: BLANK_IMG },
-  { id: 'd3', name: 'Chocolate Frost', img: BLANK_IMG },
-  { id: 'd4', name: 'Matcha Magic', img: BLANK_IMG },
-  { id: 'd5', name: 'Coconut Dream', img: BLANK_IMG },
-  { id: 'd6', name: 'Maple Bacon', img: BLANK_IMG },
-  { id: 'd7', name: 'Old Fashioned', img: BLANK_IMG },
-  { id: 'd8', name: 'Blueberry Cakie', img: BLANK_IMG },
-  { id: 'd9', name: 'Vanilla Bean', img: BLANK_IMG }
+  { id: 'd1', name: 'Churro Swirl', img: 'donut.png' },
+  { id: 'd2', name: 'Chocolate', img: 'donut.png' },
+  { id: 'd3', name: 'Vanilla Glaze', img: 'donut.png' },
+  { id: 'd4', name: 'Tootsie Roll', img: 'donut.png' },
+  { id: 'd5', name: 'Mixed Berry', img: 'donut.png' },
+  { id: 'd6', name: 'Cookies N Creme', img: 'donut.png' },
+  { id: 'd7', name: 'Fruity Pebz', img: 'donut.png' },
+  { id: 'd8', name: 'Vanilla Wafer', img: 'donut.png' },
+  { id: 'd9', name: 'Chocolate Chips N Nuts', img: 'donut.png' }
 ];
 
 /* 1. D3.js Drop Down Animation */
