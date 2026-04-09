@@ -3,11 +3,39 @@
  */
 
 document.addEventListener("DOMContentLoaded", () => {
-  initHeroD3Animation();
-  initCarousel();
-  initVotingSystem();
+  initBannerMarquee();
   initSmoothScrolling();
+  try { initCarousel(); } catch (e) { }
+  try { initVotingSystem(); } catch (e) { }
 });
+
+// Banner Marquee - infinite scroll
+function initBannerMarquee() {
+  const track = document.getElementById('banner-track');
+  if (!track) return;
+
+  const text = 'DANKY DONUT ';
+  // Create a single span to measure its width
+  const measureSpan = document.createElement('span');
+  measureSpan.className = 'banner-text';
+  measureSpan.textContent = text;
+  track.appendChild(measureSpan);
+  const singleWidth = measureSpan.offsetWidth;
+  track.removeChild(measureSpan);
+
+  // Calculate how many repetitions we need to fill 2x the viewport
+  const viewportWidth = window.innerWidth;
+  const repsNeeded = Math.ceil((viewportWidth * 3) / singleWidth);
+  const fullText = text.repeat(repsNeeded);
+
+  // Create two identical spans for seamless loop
+  for (let i = 0; i < 2; i++) {
+    const span = document.createElement('span');
+    span.className = 'banner-text';
+    span.textContent = fullText;
+    track.appendChild(span);
+  }
+}
 
 // Mock Donut Database
 const BLANK_IMG = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Crect width='100%25' height='100%25' fill='%23d4d4d4'/%3E%3C/svg%3E";
